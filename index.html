@@ -7,7 +7,30 @@
    <title>animation</title>
 </head>
 <body>
+   <style>
+   #content {position: relative; transition: all .3s ease-in-out;}
+   </style>
+<button onclick="active('open')">open</button>
+<button onclick="active('close')">close</button>
+<div id="content">
+   <p>Lorem ipsum dolor sit amet.</p>
+</div>
+<script>
+var content = document.getElementById('content');
 
+function active(type) {
+   if(type === 'open') {
+      content.style.transform='translateX(10px)';
+   }else if(type === 'close') {
+      content.style.transform='translateX(0)';
+   }
+}
+setInterval(loof, 1000);
+setTimeout(stop, 5000);
 
+function stop() {
+   clearInterval(timer);
+}
+</script>
 </body>
 </html>
