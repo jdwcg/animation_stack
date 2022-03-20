@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Document</title>
+</head>
+
+<body>
+   <style>
+      .active {
+         background: red;
+      }
+   </style>
+   <div class="btns">
+      <button class="btn">버튼</button>
+      <button class="btn">버튼</button>
+      <button class="btn">버튼</button>
+   </div>
+
+   <script>
+      let current;
+      let btns = document.querySelector('.btns');
+
+      function clickHandler(e) {
+         if(current){
+            current.classList.remove('active');
+         }
+         e.target.classList.add('active');
+         current = e.target;
+      }
+
+      // for(var i=0; i<btn.length; i++) {
+         btns.addEventListener('click', clickHandler);
+      // }
+
+   </script>
+</body>
+
+</html>
